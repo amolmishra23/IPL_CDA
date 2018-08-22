@@ -92,11 +92,13 @@ The parameters for bowlers include :
 
 CDAI analyzes:
 
-* Individual batsman performance
-* Individual bowler performance
-* Particular match
-* Head to head between 2 teams
-* Overall performance of a team
-* Ranking of players using different indexes
-* Prediction of outcomes of matches
+* Individual batsman performance using various strategies 
+* Individual bowler performance using various strategies
+* Particular match in-detail analysis
+* Head to head analysis between 2 teams 
+* Overall performance of a team in-detail analysis
+* Ranking of players using various techniques
+* Suggesting best batsman against a bowler and vice-versa
+* Suggesting best playing 11 from a team 
+* Prediction of outcomes of matches 
 
