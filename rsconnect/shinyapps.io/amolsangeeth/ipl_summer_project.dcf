@@ -1,0 +1,12 @@
+name: ipl_summer_project
+title: ipl_summer_project
+username:
+account: amolsangeeth
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 375110
+bundleId: 1467405
+url: https://amolsangeeth.shinyapps.io/ipl_summer_project/
+when: 1530849675.42254
+asMultiple: FALSE
+asStatic: FALSE

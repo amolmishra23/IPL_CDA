@@ -1,0 +1,10 @@
+multilayer perceptron
+smo
+naivebayes
+gausian naive bayes
+logistic regression
+IBk
+j48 trees
+random forest
+random tree
+JRip

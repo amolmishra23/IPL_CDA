@@ -1,0 +1,28 @@
+library(dplyr)
+setwd("projectDataFrames/ranking")
+file_names <- list.files()
+lapply(file_names,load,.GlobalEnv)
+load('projectDataFrames/ranking/Batsman-MVPI.RData')
+load('projectDataFrames/ranking/Batsman-DPI.RData')
+load('projectDataFrames/ranking/Bowler-MVPI.RData')
+load('projectDataFrames/ranking/Bowler-DPI.RData')
+setwd("..")
+setwd("..")
+
+batsman_MVPI_R <- select(batsman_MVPI,batsman,MVPI)
+batsman_DPI_R <- select(batsman_DPI,batsman,hardHitter:rbw)
+bowler_MVPI_R <- select(bowler_MVPI,bowler,MVPI)
+bowler_DPI_R <- select(bowler_DPI,bowler,PBWER:ShortPerf)
+
+full_batsman_data <- full_join(batsman_DPI_R,batsman_MVPI_R,by="batsman")
+full_batsman_data <- na.omit(full_batsman_data)
+full_batsman_data <- arrange(full_batsman_data,desc(MVPI))
+
+full_bowler_data <- full_join(bowler_DPI_R,bowler_MVPI_R,by="bowler")
+full_bowler_data <- na.omit(full_bowler_data)
+full_bowler_data <- arrange(full_bowler_data,desc(MVPI))
+
+d1 <- paste("projectDataFrames/ranking","/","BatsmanPredict.RData",sep="")
+d2 <- paste("projectDataFrames/ranking","/","BowlerPredict.RData",sep="")
+save(full_batsman_data, file=d1)
+save(full_bowler_data, file=d2)
